@@ -1,9 +1,16 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.hello = void 0;
-const world = 'world';
-function hello(who = world) {
-    return `Hello ${who}! `;
+function callApi() {
+    const options = {
+        headers: {
+            "Accept": "application/json"
+        }
+    };
+    fetch("https://icanhazdadjoke.com/", options)
+        .then((res) => res.json())
+        .then(res => {
+        const jokeElement = (document.getElementById("joke"));
+        jokeElement.innerHTML = res.joke;
+        console.log(res);
+    });
 }
-exports.hello = hello;
 //# sourceMappingURL=index.js.map

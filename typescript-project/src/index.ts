@@ -1,5 +1,26 @@
 
 
-export function hello(who: string = world): string {
-  return `Hello ${who}! `;
+
+
+
+
+ function callApi(){
+  const options = {
+    headers: {
+      "Accept": "application/json"
+    }
+  }
+  fetch ("https://icanhazdadjoke.com/", options)
+    .then ((res)=> res.json())
+    .then (res =>{
+      const jokeElement:HTMLElement = <HTMLElement>(document.getElementById("joke"));
+      jokeElement.innerHTML=res.joke;
+      console.log(res)
+    })
+
 }
+
+
+
+
+

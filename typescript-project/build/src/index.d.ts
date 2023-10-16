@@ -1,1 +1,1 @@
-export declare function hello(who?: string): string;
+declare function callApi(): void;
