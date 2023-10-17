@@ -1,0 +1,33 @@
+
+
+html, body {
+    height: 150%;
+    margin:0;
+    padding: 10%;
+    background-image: url(imagenes/diversas-personas-aplaudiendo-diversos-hombres-mujeres-aplaudiendo-saludo-ovacion-apoyo_442961-205.jpg);
+}
+
+
+#container {
+    text-align: center;
+    
+}
+
+.titulo {
+    text-align: center;
+    
+}
+button{
+    background-color: aquamarine;
+    color: rgb(10, 10, 10);
+    border:#000000;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 14px 28px; 
+}
+button:hover {
+    background-color: #45a049;
+  }
+button:active {
+    background-color: #3e8e41;
+  }
