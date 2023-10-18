@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/typescript-project/style.css">
-    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <title>SprintNi-4</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/typescript-project/style.css">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <title>SprintNi-4</title>
 </head>
+
 <body>
-    <div class="titulo" >
+  <div class="titulo">
     <h1>Preparat per riure?....
-        <i class="em em-face_with_hand_over_mouth" aria-role="presentation" aria-label="SMILING FACE WITH SMILING EYES AND HAND COVERING MOUTH">
-        </i>
+      <i class="em em-face_with_hand_over_mouth" aria-role="presentation"
+        aria-label="SMILING FACE WITH SMILING EYES AND HAND COVERING MOUTH">
+      </i>
     </h1>
-    </div>
-    <div id="container">
+  </div>
+  <div id="container">
     <p id="joke"></p>
-    <button onclick="callApi()">Siguiente Chiste</button>
-    
+    <div class="bot">
+      
+      <button onclick="registerScore(1)"><img src="/typescript-project/imagenes/1.png" ></button>
+      <button onclick="registerScore(2)"><img src="/typescript-project/imagenes/2.png"></button>
+      <button onclick="registerScore(3)"><img src="/typescript-project/imagenes/3.png"></button>
+
     </div>
-    
-    <script  src="/typescript-project/build/src/index.js"></script>
+
+    <button onclick="callApi()" class="enviar">Siguiente Chiste</button>
+
+ 
+
+  <script src="/typescript-project/build/src/index.js"></script>
 </body>
+
 </html>

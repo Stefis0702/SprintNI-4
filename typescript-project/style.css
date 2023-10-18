@@ -17,17 +17,26 @@ html, body {
     text-align: center;
     
 }
-button{
+.enviar{
     background-color: aquamarine;
     color: rgb(10, 10, 10);
     border:#000000;
     border-radius: 15px;
     cursor: pointer;
     padding: 14px 28px; 
+    margin: 16px;
 }
-button:hover {
+.enviar:hover {
     background-color: #45a049;
   }
-button:active {
+.enviar:active {
     background-color: #3e8e41;
   }
+button{
+    cursor: pointer;
+    border:#000000;
+    background-color:#ffffff;
+   
+}
+    
+
