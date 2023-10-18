@@ -17,9 +17,6 @@ function callApi() {
         console.error('Error al cargar la API', error);
     });
 }
-window.addEventListener("load", function (event) {
-    callApi();
-});
 function registerScore(score) {
     const jokeId = document.getElementById("joke");
     if (jokeId && jokeId.textContent) {
@@ -34,4 +31,28 @@ function registerScore(score) {
     }
     console.log(reportAcudits);
 }
+function infMeteo() {
+    const options = {
+        headers: {
+            "Accept": "application/json"
+        }
+    };
+    fetch("https://www.el-tiempo.net/api/json/v2/provincias/08/municipios/08019", options)
+        .then((res) => res.json())
+        .then(data => {
+        const timeInfo = (document.getElementById('time'));
+        timeInfo.innerHTML = `
+            <p>${data.metadescripcion} ${data.temperatura_actual}°C</p>
+            
+          `;
+        console.log(data);
+    })
+        .catch(error => {
+        console.error('Error al cargar la API', error);
+    });
+}
+window.addEventListener("load", function (event) {
+    infMeteo();
+    callApi();
+});
 //# sourceMappingURL=index.js.map

@@ -5,3 +5,4 @@ declare const reportAcudits: Array<{
 }>;
 declare function callApi(): void;
 declare function registerScore(score: number): void;
+declare function infMeteo(): void;

@@ -20,9 +20,7 @@ const reportAcudits:Array<{ joke: string, score: number, date: string }> = [];
   });
 }
 
-window.addEventListener("load", function (event) {
-  callApi();
-})
+
 
 function registerScore(score:number){
         const jokeId=document.getElementById("joke");
@@ -40,6 +38,34 @@ function registerScore(score:number){
               }
               console.log(reportAcudits)
 }
+
+function infMeteo(){
+  const options = {
+    headers: {
+      "Accept": "application/json"
+    }
+  }
+  fetch ("https://www.el-tiempo.net/api/json/v2/provincias/08/municipios/08019", options)
+    .then ((res)=> res.json())
+    .then (data =>{
+      const timeInfo:HTMLElement = <HTMLElement>(document.getElementById('time'));
+          timeInfo.innerHTML = `
+            <p>${data.metadescripcion} ${data.temperatura_actual}°C</p>
+            
+          `;
+      console.log(data)
+    })
+    .catch(error => {
+      console.error('Error al cargar la API', error);
+  });
+  
+}
+
+window.addEventListener("load", function (event) {
+  infMeteo();
+  callApi();
+  
+})
 
 
 

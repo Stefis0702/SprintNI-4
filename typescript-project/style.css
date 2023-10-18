@@ -1,9 +1,8 @@
 
 
 html, body {
-    height: 150%;
-    margin:0;
-    padding: 10%;
+    
+    
     background-image: url(imagenes/diversas-personas-aplaudiendo-diversos-hombres-mujeres-aplaudiendo-saludo-ovacion-apoyo_442961-205.jpg);
 }
 
@@ -15,6 +14,9 @@ html, body {
 
 .titulo {
     text-align: center;
+    height: 150%;
+    padding: 10% 0 0 0;
+    
     
 }
 .enviar{
@@ -37,6 +39,9 @@ button{
     border:#000000;
     background-color:#ffffff;
    
+}
+.tiempo{
+    text-align:left;
 }
     
 
