@@ -2,13 +2,18 @@
 
 const reportAcudits:Array<{ joke: string, score: number, date: string }> = [];
 
+const jokesApi=[
+  "https://icanhazdadjoke.com/","https://api.chucknorris.io/jokes/random"]
+
  function callApi(){
+  const randomSourceIndex = Math.floor(Math.random() * jokesApi.length);
+  const randomSource = jokesApi[randomSourceIndex];
   const options = {
     headers: {
       "Accept": "application/json"
     }
   }
-  fetch ("https://icanhazdadjoke.com/", options)
+  fetch (randomSource, options)
     .then ((res)=> res.json())
     .then (res =>{
       const jokeElement:HTMLElement = <HTMLElement>(document.getElementById("joke"));
@@ -53,7 +58,7 @@ function infMeteo(){
             <p>${data.metadescripcion} ${data.temperatura_actual}°C</p>
             
           `;
-      console.log(data)
+      //console.log(data)
     })
     .catch(error => {
       console.error('Error al cargar la API', error);
