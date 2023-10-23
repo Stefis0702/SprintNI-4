@@ -15,7 +15,12 @@ function callApi() {
         .then((res) => res.json())
         .then(res => {
         const jokeElement = (document.getElementById("joke"));
-        jokeElement.innerHTML = res.joke;
+        if (randomSource.includes("icanhazdadjoke")) {
+            jokeElement.innerHTML = res.joke;
+        }
+        else if (randomSource.includes("chucknorris.io")) {
+            jokeElement.innerHTML = res.value;
+        }
         console.log(res);
     })
         .catch(error => {

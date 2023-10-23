@@ -17,8 +17,13 @@ const jokesApi=[
     .then ((res)=> res.json())
     .then (res =>{
       const jokeElement:HTMLElement = <HTMLElement>(document.getElementById("joke"));
-      jokeElement.innerHTML=res.joke;
-      console.log(res)
+     
+      if (randomSource.includes("icanhazdadjoke")) {
+        jokeElement.innerHTML = res.joke;
+        } else if (randomSource.includes("chucknorris.io")) {
+          jokeElement.innerHTML = res.value;
+          } 
+          console.log(res) 
     })
     .catch(error => {
       console.error('Error al cargar la API', error);

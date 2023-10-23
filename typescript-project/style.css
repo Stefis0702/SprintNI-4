@@ -4,11 +4,16 @@ html, body {
     
     
     background-image: url(imagenes/diversas-personas-aplaudiendo-diversos-hombres-mujeres-aplaudiendo-saludo-ovacion-apoyo_442961-205.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+   
+    
 }
 
 
 #container {
     text-align: center;
+   
     
 }
 
@@ -37,7 +42,7 @@ html, body {
 button{
     cursor: pointer;
     border:#000000;
-    background-color:#ffffff;
+    background-color:transparent;
    
 }
 .tiempo{
